@@ -26,7 +26,9 @@
 	"require": {
 		"php": "^8.2",
 		"symfony/dependency-injection": "^6.4 | ^7.0",
-		"symfony/framework-bundle": "^6.4 | ^7.0"
+		"symfony/framework-bundle": "^6.4 | ^7.0",
+		"symfony/ux-icons": "^2.23",
+		"symfony/ux-twig-component": "^2.23"
 	},
 	"require-dev": {
 		"dama/doctrine-test-bundle": "^8.2",
