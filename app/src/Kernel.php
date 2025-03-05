@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 31/01/2025, 18:49
+ * Last modified by "IDMarinas" on 05/03/2025, 22:38
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -159,6 +159,15 @@ final class Kernel extends BaseKernel
 				$loader->load($config);
 			}
 		}
+
+		$container->loadFromExtension('twig_component', [
+			'defaults' => [
+				'Idm\\Bundle\\Ui\\Twig\\Component\\' => [
+					'template_directory' => '@IdmUi/components',
+					'name_prefix'        => '',
+				],
+			],
+		]);
 	}
 
 	private function getBundlesPath (): string
