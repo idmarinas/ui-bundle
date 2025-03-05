@@ -3,7 +3,13 @@
 	"description": "IDMarinas UI Bundle a collection of reusable Twig components styled with TailwindCSS",
 	"type": "symfony-bundle",
 	"license": "BSD-3-Clause",
-	"keywords": ["symfony-bundle"],
+	"keywords": [
+		"symfony-bundle",
+		"ui",
+		"twig-components",
+		"tailwindcss",
+		"tailwind"
+	],
 	"homepage": "https://github.com/idmarinas/ui-bundle",
 	"authors": [
 		{
