@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 02/01/2025, 23:32
+ * Last modified by "IDMarinas" on 05/03/2025, 22:37
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -28,5 +28,17 @@ final class IdmUiBundle extends AbstractBundle
 	public function loadExtension (array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
 	{
 		$container->import(dirname(__DIR__) . '/config/services.php');
+	}
+
+	public function prependExtension (ContainerConfigurator $container, ContainerBuilder $builder): void
+	{
+		$builder->prependExtensionConfig('twig_component', [
+			'defaults' => [
+				'Idm\\Bundle\\Ui\\Twig\\Component\\' => [
+					'template_directory' => '@IdmUi/components',
+					'name_prefix'        => 'IdmUi',
+				],
+			],
+		]);
 	}
 }
