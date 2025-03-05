@@ -87,12 +87,12 @@ return [
 ];
 ```
 
-
 ## 🖱️ Tech used in code
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/idmarinas/ui-bundle.svg?style=for-the-badge)
 [![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net)
 [![Symfony](https://img.shields.io/badge/symfony-black.svg?style=for-the-badge&logo=symfony&logoColor=white)](https://www.symfony.com)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ## 🛠️ Tools used for create this project
 
