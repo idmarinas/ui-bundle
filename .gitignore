@@ -1,0 +1,10 @@
+###> idmarinas/ui-bundle ###
+**/*.dist
+/build/
+/vendor/
+/var/
+/phpunit.xml
+!/phpunit.xml.dist
+/.phpunit.result.cache
+/composer.lock
+###< idmarinas/ui-bundle ###
