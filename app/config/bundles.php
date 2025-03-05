@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 09/01/2025, 21:46
+ * Last modified by "IDMarinas" on 05/03/2025, 22:14
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -23,12 +23,20 @@ use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Idm\Bundle\Ui\IdmUiBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\MakerBundle\MakerBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
+use Symfony\UX\Icons\UXIconsBundle;
+use Symfony\UX\TwigComponent\TwigComponentBundle;
+use Twig\Extra\TwigExtraBundle\TwigExtraBundle;
 use Zenstruck\Foundry\ZenstruckFoundryBundle;
 
 return [
 	FrameworkBundle::class        => ['all' => true],
 	DoctrineBundle::class         => ['all' => true],
-	IdmUiBundle::class      => ['all' => true],
+	TwigBundle::class             => ['all' => true],
+	TwigExtraBundle::class        => ['all' => true],
+	TwigComponentBundle::class    => ['all' => true],
+	UXIconsBundle::class          => ['all' => true],
+	IdmUiBundle::class            => ['all' => true],
 
 	// Dev-Test Bundles
 	MakerBundle::class            => ['all' => true],
