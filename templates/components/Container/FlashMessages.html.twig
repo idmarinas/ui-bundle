@@ -1,0 +1,19 @@
+{# Read and Display all Flash Messages #}
+{% for label, msgs in this.messages %}
+	{% for message in msgs %}
+		{% if message is iterable %}
+			{% set title = message.title %}
+			{% set message = message.message %}
+		{% endif %}
+
+		<twig:IdmUi:Element:Alert :title="title|default('')" :message="message" :type="label" />
+	{% endfor %}
+{% endfor %}
+
+{% if show_divider %}
+	<div class="hidden sm:block" aria-hidden="true">
+		<div class="py-5">
+			<div class="border-t border-blue-500"></div>
+		</div>
+	</div>
+{% endif %}

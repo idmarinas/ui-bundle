@@ -1,0 +1,27 @@
+<div class="fixed inset-x-0 top-0 flex flex-col items-end justify-right px-4 py-6 sm:p-6 justify-end z-30 pointer-events-none">
+	{# Read and Display all Notifications messages #}
+	{% set index = 0 %}
+
+	{% for label, msgs in this.messages %}
+		{% set show_divider = true %}
+
+		{% for message in msgs %}
+			{% set id = index %}
+			{% set index = index + 1 %}
+
+			{% if message is iterable %}
+				{% set title = message.title|default('') %}
+				{% set message = message.message %}
+				{% set duration = message.duration|default(5000) %}
+			{% endif %}
+
+			<twig:IdmUi:Element:Notification
+				:id="label ~ '-' ~ id"
+				:type="label"
+				:title="title|default('')"
+				:message="message"
+				:duration="duration|default(5000) + (id * 5000)"
+			/>
+		{% endfor %}
+	{% endfor %}
+</div>
