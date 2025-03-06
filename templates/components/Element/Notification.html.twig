@@ -1,0 +1,38 @@
+<div{{ attributes.defaults({
+	class: 'border-l-4 transition transform duration-1000 max-w-sm w-full shadow-lg px-4 py-3 mb-4 rounded relative
+	pointer-events-auto ' ~ notification_class,
+	'data-controller': 'notification',
+	'data-notification-delay': this.duration,
+	'data-transition-enter-from': 'opacity-0 translate-x-6',
+	'data-transition-enter-to': 'opacity-100 translate-x-0',
+	'data-transition-leave-from': 'opacity-100 translate-x-0',
+	'data-transition-leave-to': 'opacity-0 translate-x-6'
+}) }}>
+	<div class="p-2">
+		<div class="flex items-start">
+			<div class="flex items-center border-2 justify-center h-10 w-10 flex-shrink-0 rounded-full {{ icon_class_cnt }}">
+				<twig:UX:Icon :name="icon_name" class="h-5 w-5" />
+			</div>
+
+			<div class="ml-3 w-0 flex-1 pt-0.5">
+				{% if this.title is not empty %}
+					<p class="text-sm font-medium">{{ this.title }}</p>
+				{% endif %}
+
+				<p class="text-sm leading-5">{{ message }}</p>
+			</div>
+
+			{% if this.closable %}
+				<div class="ml-4 flex-shrink-0 flex">
+					<button
+						aria-label="{{ 'notification.close'|trans({}, 'IdmUiBundle') }}"
+						data-action="click->notification#hide"
+						class="inline-flex text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150"
+					>
+						<twig:UX:Icon name="tabler:x" class="h-5 w-5" />
+					</button>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>
