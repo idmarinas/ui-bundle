@@ -60,10 +60,10 @@ jobs:
       - name: Run test suite on PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
         run: ./vendor/bin/phpunit --exclude ignore
 
-      # # Uncomment to activate SonarCloud Scan
-      # - name: SonarCloud Scan
-      #   if: matrix.php == '8.2' && matrix.symfony == '6.4.*'
-      #   uses: SonarSource/sonarqube-scan-action@v4
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      # Uncomment to activate SonarCloud Scan
+      - name: SonarCloud Scan
+        if: matrix.php == '8.2' && matrix.symfony == '6.4.*'
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
