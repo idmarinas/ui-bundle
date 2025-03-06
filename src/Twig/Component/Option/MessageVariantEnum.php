@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/03/2025, 15:30
+ * Last modified by "IDMarinas" on 06/03/2025, 15:32
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -21,7 +21,7 @@ namespace Idm\Bundle\Ui\Twig\Component\Option;
 
 enum MessageVariantEnum: string
 {
-	use ValidateEnumTrait;
+	use IsValidValueEnumTrait;
 
 	case Success = 'success';
 	case Danger  = 'danger';
