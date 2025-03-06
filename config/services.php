@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 05/03/2025, 20:55
+ * Last modified by "IDMarinas" on 06/03/2025, 11:45
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -26,6 +26,7 @@ return function (ContainerConfigurator $container) {
 	$container->services()
 		->set('.idm_ui.twig_component.element.alert', Alert::class)
 			->tag('twig.component')
+			->arg('$translator', service('translator')->nullOnInvalid())
 	;
 	// @formatter::on
 };
