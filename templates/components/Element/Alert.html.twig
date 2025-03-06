@@ -1,0 +1,16 @@
+<div{{ attributes.defaults({
+	class: 'flex flex-row items-center p-5 rounded border-b-2 mb-2 text-left ' ~ alert_class,
+	role: 'alert'
+}) }}>
+	<div class="flex items-center border-2 justify-center h-10 w-10 flex-shrink-0	rounded-full {{ icon_class_cnt }}">
+		<twig:UX:Icon :name="icon_name" class="h-5 w-5" />
+	</div>
+	<div class="ml-4">
+		{% if this.title is not empty %}
+			<div class="font-semibold text-lg">
+				{{ this.title }}
+			</div>
+		{% endif %}
+		<div class="text-sm">{{ message }}</div>
+	</div>
+</div>
