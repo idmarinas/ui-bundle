@@ -1,8 +1,9 @@
 <?php
+
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/03/2025, 15:32
+ * Last modified by "IDMarinas" on 06/03/2025, 23:55
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -22,6 +23,9 @@ namespace Idm\Bundle\Ui\Twig\Component\Option;
 enum MessageVariantEnum: string
 {
 	use IsValidValueEnumTrait;
+	use NormalizeValueEnumTrait;
+
+	public const Default = self::Notice;
 
 	case Success = 'success';
 	case Danger  = 'danger';
