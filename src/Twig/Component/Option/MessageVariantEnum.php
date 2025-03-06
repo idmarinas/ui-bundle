@@ -19,7 +19,7 @@
 
 namespace Idm\Bundle\Ui\Twig\Component\Option;
 
-enum AlertVariantEnum: string
+enum MessageVariantEnum: string
 {
 	case Success = 'success';
 	case Danger  = 'danger';
