@@ -25,9 +25,11 @@
 	"prefer-stable": true,
 	"require": {
 		"php": "^8.2",
+		"symfony/console": "^6.4 | ^7.0",
 		"symfony/dependency-injection": "^6.4 | ^7.0",
 		"symfony/framework-bundle": "^6.4 | ^7.0",
 		"symfony/options-resolver": "^6.4 | ^7.0",
+		"symfony/translation": "^6.4 | ^7.0",
 		"symfony/twig-bundle": "^6.4 | ^7.0",
 		"symfony/ux-icons": "^2.23",
 		"symfony/ux-twig-component": "^2.23",
@@ -44,7 +46,6 @@
 		"symfony/css-selector": "^6.4 | ^7.0",
 		"symfony/maker-bundle": "^1.61",
 		"symfony/runtime": "^6.4 | ^7.0",
-		"symfony/translation": "^6.4 | ^7.0",
 		"symfony/yaml": "^6.4 | ^7.0",
 		"symfonycasts/tailwind-bundle": "^0.8.0",
 		"zenstruck/foundry": "^2.3"
