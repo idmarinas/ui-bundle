@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/03/2025, 14:14
+ * Last modified by "IDMarinas" on 06/03/2025, 19:33
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -19,6 +19,8 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
+use Idm\Bundle\Ui\Twig\Component\Container\FlashMessages;
+use Idm\Bundle\Ui\Twig\Component\Container\NotificationMessages;
 use Idm\Bundle\Ui\Twig\Component\Element\Alert;
 use Idm\Bundle\Ui\Twig\Component\Element\Notification;
 
@@ -31,6 +33,12 @@ return function (ContainerConfigurator $container) {
 
 		->set('.idm_ui.twig_component.element.notification', Notification::class)
 			->arg('$translator', service('translator')->nullOnInvalid())
+			->tag('twig.component')
+
+		->set('.idm_ui.twig_component.container.flash_messages', FlashMessages::class)
+			->tag('twig.component')
+
+		->set('.idm_ui.twig_component.container.notification_messages', NotificationMessages::class)
 			->tag('twig.component')
 	;
 	// @formatter::on
