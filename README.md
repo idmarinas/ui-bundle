@@ -8,7 +8,7 @@
 
 </div>
 
-> Short description for Bundle
+> IDMarinas UI Bundle a collection of reusable Twig components styled with TailwindCSS
 
 <br />
 
