@@ -2,19 +2,19 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 05/03/2025, 22:37
+ * Last modified by "IDMarinas" on 06/05/2025, 14:10
  *
  * @project IDMarinas Ui Bundle
- * @see     https://github.com/idmarinas/ui-bundle
+ * @see https://github.com/idmarinas/ui-bundle
  *
- * @file    IdmUiBundle.php
- * @date    05/03/2025
- * @time    15:51
+ * @file IdmUiBundle.php
+ * @date 05/03/2025
+ * @time 15:51
  *
- * @author  Iván Diaz Marinas (IDMarinas)
+ * @author Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
  *
- * @since   1.0.0
+ * @since 1.0.0
  */
 
 namespace Idm\Bundle\Ui;
@@ -34,7 +34,7 @@ final class IdmUiBundle extends AbstractBundle
 	{
 		$builder->prependExtensionConfig('twig_component', [
 			'defaults' => [
-				'Idm\\Bundle\\Ui\\Twig\\Component\\' => [
+				'Idm\\Bundle\\Ui\\Twig\\Components\\' => [
 					'template_directory' => '@IdmUi/components',
 					'name_prefix'        => 'Ui',
 				],
