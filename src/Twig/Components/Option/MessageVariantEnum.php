@@ -18,7 +18,7 @@
  * @since   1.0.0
  */
 
-namespace Idm\Bundle\Ui\Twig\Component\Option;
+namespace Idm\Bundle\Ui\Twig\Components\Option;
 
 enum MessageVariantEnum: string
 {
