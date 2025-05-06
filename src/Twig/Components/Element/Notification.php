@@ -2,25 +2,25 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/03/2025, 21:23
+ * Last modified by "IDMarinas" on 06/05/2025, 14:02
  *
  * @project IDMarinas Ui Bundle
- * @see     https://github.com/idmarinas/ui-bundle
+ * @see https://github.com/idmarinas/ui-bundle
  *
- * @file    Notification.php
- * @date    06/03/2025
- * @time    14:11
+ * @file Notification.php
+ * @date 06/03/2025
+ * @time 14:11
  *
- * @author  Iván Diaz Marinas (IDMarinas)
+ * @author Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
  *
- * @since   1.0.0
+ * @since 1.0.0
  */
 
-namespace Idm\Bundle\Ui\Twig\Component\Element;
+namespace Idm\Bundle\Ui\Twig\Components\Element;
 
 use Idm\Bundle\Ui\Traits\TranslateOrSanitizeTrait;
-use Idm\Bundle\Ui\Twig\Component\Option\MessageVariantEnum;
+use Idm\Bundle\Ui\Twig\Components\Option\MessageVariantEnum;
 use Symfony\Component\OptionsResolver\Options;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\DivisibleBy;
