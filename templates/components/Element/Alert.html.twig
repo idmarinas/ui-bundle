@@ -1,8 +1,44 @@
-<div{{ attributes.defaults({
-	class: 'flex flex-row items-center p-5 rounded border-b-2 mb-2 text-left ' ~ alert_class,
-	role: 'alert'
-}) }}>
-	<div class="flex items-center border-2 justify-center h-10 w-10 flex-shrink-0	rounded-full {{ icon_class_cnt }}">
+{# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
+
+{% set alert = html_cva(
+	base: 'flex flex-row items-center p-5 rounded border-b-2 mb-2 text-left',
+	variants: {
+		type: {
+			danger: 'bg-red-200 border-red-300 text-red-700',
+			error: 'bg-red-200 border-red-300 text-red-700',
+			success: 'bg-green-200 border-green-300 text-green-700',
+			warning: 'bg-yellow-200 border-yellow-300 text-yellow-700',
+			info: 'bg-blue-200 border-blue-300 text-blue-700',
+			notice: 'bg-gray-200 border-gray-300 text-gray-700'
+		}
+	},
+	defaultVariants: {
+		type: 'notice'
+	}
+) %}
+
+{% set icon_cnt = html_cva(
+	base: 'flex items-center border-2 justify-center h-10 w-10 flex-shrink-0	rounded-full',
+	variants: {
+		type: {
+			danger: 'bg-red-100 border-red-500',
+			error: 'bg-red-100 border-red-500',
+			success: 'bg-green-100 border-green-500',
+			warning: 'bg-yellow-100 border-yellow-500',
+			info: 'bg-blue-100 border-blue-500',
+			notice: 'bg-gray-100 border-gray-500'
+		}
+	},
+	defaultVariants: {
+		type: 'notice'
+	}
+) %}
+
+<div
+	class="{{ alert.apply({ type }, attributes.render('class')) }}"
+	{{ attributes.defaults({ role: 'alert'}) }}
+>
+	<div class="{{ icon_cnt.apply({ type }) }}">
 		<twig:UX:Icon :name="icon_name" class="h-5 w-5" />
 	</div>
 	<div class="ml-4">

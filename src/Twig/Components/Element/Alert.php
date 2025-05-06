@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/05/2025, 14:02
+ * Last modified by "IDMarinas" on 06/05/2025, 19:36
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -84,32 +84,6 @@ final class Alert
 			MessageVariantEnum::Warning => 'tabler:exclamation-mark',
 			MessageVariantEnum::Info    => 'tabler:info-circle',
 			MessageVariantEnum::Notice  => 'tabler:message',
-		};
-	}
-
-	#[ExposeInTemplate('icon_class_cnt')]
-	public function getIconClassCnt (): string
-	{
-		return match ($this->type) {
-			MessageVariantEnum::Error,
-			MessageVariantEnum::Danger  => 'bg-red-100 border-red-500',
-			MessageVariantEnum::Success => 'bg-green-100 border-green-500',
-			MessageVariantEnum::Warning => 'bg-yellow-100 border-yellow-500',
-			MessageVariantEnum::Info    => 'bg-blue-100 border-blue-500',
-			MessageVariantEnum::Notice  => 'bg-gray-100 border-gray-500',
-		};
-	}
-
-	#[ExposeInTemplate('alert_class')]
-	public function getAlertClass (): string
-	{
-		return match ($this->type) {
-			MessageVariantEnum::Error,
-			MessageVariantEnum::Danger  => 'bg-red-200 border-red-300 text-red-700',
-			MessageVariantEnum::Success => 'bg-green-200 border-green-300 text-green-700',
-			MessageVariantEnum::Warning => 'bg-yellow-200 border-yellow-300 text-yellow-700',
-			MessageVariantEnum::Info    => 'bg-blue-200 border-blue-300 text-blue-700',
-			MessageVariantEnum::Notice  => 'bg-gray-200 border-gray-300 text-gray-700',
 		};
 	}
 }
