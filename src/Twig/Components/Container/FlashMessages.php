@@ -2,19 +2,19 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/03/2025, 20:45
+ * Last modified by "IDMarinas" on 06/05/2025, 14:04
  *
  * @project IDMarinas Ui Bundle
- * @see     https://github.com/idmarinas/ui-bundle
+ * @see https://github.com/idmarinas/ui-bundle
  *
- * @file    FlashMessages.php
- * @date    06/03/2025
- * @time    19:18
+ * @file FlashMessages.php
+ * @date 06/03/2025
+ * @time 19:18
  *
- * @author  Iván Diaz Marinas (IDMarinas)
+ * @author Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
  *
- * @since   1.0.0
+ * @since 1.0.0
  */
 
 namespace Idm\Bundle\Ui\Twig\Components\Container;
@@ -28,7 +28,7 @@ final class FlashMessages
 	public array $messages;
 
 	#[ExposeInTemplate('show_divider')]
-	public bool $showDivider;
+	private bool $showDivider;
 
 	#[PreMount]
 	public function preMount (array $data): array
