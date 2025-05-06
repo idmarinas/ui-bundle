@@ -15,7 +15,7 @@
 				{% set duration = message.duration|default(5000) %}
 			{% endif %}
 
-			<twig:IdmUi:Element:Notification
+			<twig:UI:Element:Notification
 				:id="label ~ '-' ~ id"
 				:type="label"
 				:title="title|default('')"
