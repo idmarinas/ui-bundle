@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/05/2025, 14:04
+ * Last modified by "IDMarinas" on 06/05/2025, 17:13
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -28,7 +28,7 @@ final class FlashMessages
 	public array $messages;
 
 	#[ExposeInTemplate('show_divider')]
-	private bool $showDivider;
+	public bool $showDivider;
 
 	#[PreMount]
 	public function preMount (array $data): array
