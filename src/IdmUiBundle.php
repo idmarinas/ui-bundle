@@ -36,7 +36,7 @@ final class IdmUiBundle extends AbstractBundle
 			'defaults' => [
 				'Idm\\Bundle\\Ui\\Twig\\Component\\' => [
 					'template_directory' => '@IdmUi/components',
-					'name_prefix'        => 'IdmUi',
+					'name_prefix'        => 'Ui',
 				],
 			],
 		]);
