@@ -17,7 +17,7 @@
  * @since   1.0.0
  */
 
-namespace Idm\Bundle\Ui\Twig\Component\Container;
+namespace Idm\Bundle\Ui\Twig\Components\Container;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\UX\TwigComponent\Attribute\ExposeInTemplate;
