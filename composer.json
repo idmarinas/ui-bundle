@@ -4,6 +4,7 @@
 	"type": "symfony-bundle",
 	"license": "BSD-3-Clause",
 	"keywords": [
+		"symfony-ux",
 		"symfony-bundle",
 		"ui",
 		"twig-components",
