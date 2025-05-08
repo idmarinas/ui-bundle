@@ -29,7 +29,7 @@
 ) %}
 
 <div
-	class="{{ notification.apply({ this.type }, attributes.render('class')) }}"
+	class="{{ notification.apply({ type }, attributes.render('class')) }}"
 	{{ attributes.defaults({
 		'data-controller': 'notification',
 		'data-notification-delay-value': this.duration,
@@ -41,7 +41,7 @@
 >
 	<div class="p-2">
 		<div class="flex items-start">
-			<div class="{{ icon_cnt.apply({ this.type }) }}">
+			<div class="{{ icon_cnt.apply({ type }) }}">
 				<twig:UX:Icon :name="icon_name" class="h-5 w-5" />
 			</div>
 
