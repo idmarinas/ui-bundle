@@ -1,21 +1,26 @@
 {
-  "name": "@idmarinas/ui-bundle",
-  "version": "1.0.0",
-  "description": "IDMarinas UI Bundle a collection of reusable Twig components styled with TailwindCSS",
-  "homepage": "https://github.com/idmarinas/ui-bundle",
-  "bugs": {
-    "url": "https://github.com/idmarinas/ui-bundle/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/idmarinas/ui-bundle.git"
-  },
-  "license": "BSD-3-Clause",
-  "author": {
-	  "name": "Iván Diaz Marinas (IDMarinas)",
-	  "email": "35842929+idmarinas@users.noreply.github.com",
-	  "role": "Author, Developer, Maintainer"
-  },
+	"name": "@idmarinas/ui-bundle",
+	"description": "IDMarinas UI Bundle a collection of reusable Twig components styled with TailwindCSS",
+	"keywords": [
+		"symfony-ux"
+	],
+	"homepage": "https://github.com/idmarinas/ui-bundle",
+	"bugs": {
+		"url": "https://github.com/idmarinas/ui-bundle/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/idmarinas/ui-bundle.git"
+	},
+	"license": "BSD-3-Clause",
+	"author": {
+		"name": "Iván Diaz Marinas (IDMarinas)",
+		"email": "35842929+idmarinas@users.noreply.github.com",
+		"role": "Author, Developer, Maintainer"
+	},
+	"files": [
+		"dist"
+	],
 	"symfony": {
 		"controllers": {},
 		"importmap": {
