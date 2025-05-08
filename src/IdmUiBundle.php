@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/05/2025, 17:31
+ * Last modified by "IDMarinas" on 08/05/2025, 21:35
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -19,6 +19,7 @@
 
 namespace Idm\Bundle\Ui;
 
+use Symfony\Component\AssetMapper\AssetMapperInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
@@ -40,5 +41,31 @@ final class IdmUiBundle extends AbstractBundle
 				],
 			],
 		]);
+
+		if ($this->isAssetMapperAvailable($builder)) {
+			$builder->prependExtensionConfig('framework', [
+				'asset_mapper' => [
+					'paths' => [
+						dirname(__DIR__) . '/assets/dist' => '@idmarinas/ui-bundle',
+					],
+				],
+			]);
+		}
+	}
+
+
+	private function isAssetMapperAvailable(ContainerBuilder $container): bool
+	{
+		if (!interface_exists(AssetMapperInterface::class)) {
+			return false;
+		}
+
+		// check that FrameworkBundle 6.3 or higher is installed
+		$bundlesMetadata = $container->getParameter('kernel.bundles_metadata');
+		if (!isset($bundlesMetadata['FrameworkBundle'])) {
+			return false;
+		}
+
+		return is_file($bundlesMetadata['FrameworkBundle']['path'] . '/Resources/config/asset_mapper.php');
 	}
 }
