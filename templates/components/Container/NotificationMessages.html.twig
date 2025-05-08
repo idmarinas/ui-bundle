@@ -8,19 +8,22 @@
 		{% for message in msgs %}
 			{% set id = index %}
 			{% set index = index + 1 %}
+			{% set duration = 5000 %}
 
 			{% if message is iterable %}
 				{% set title = message.title|default('') %}
 				{% set message = message.message %}
-				{% set duration = message.duration|default(5000) %}
+				{% set duration = message.duration|default(duration) %}
 			{% endif %}
+
+			{% set duration = duration + (id * 5000) %}
 
 			<twig:UI:Element:Notification
 				:id="label ~ '-' ~ id"
 				:type="label"
 				:title="title|default('')"
 				:message="message"
-				:duration="duration|default(5000) + (id * 5000)"
+				:duration="duration"
 			/>
 		{% endfor %}
 	{% endfor %}
