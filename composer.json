@@ -48,7 +48,7 @@
 		"symfony/maker-bundle": "^1.61",
 		"symfony/runtime": "^6.4 | ^7.0",
 		"symfony/yaml": "^6.4 | ^7.0",
-		"symfonycasts/tailwind-bundle": "^0.8.0",
+		"symfonycasts/tailwind-bundle": "^0.10.0",
 		"zenstruck/foundry": "^2.3"
 	},
 	"autoload": {
