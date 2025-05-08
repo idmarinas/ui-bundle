@@ -17,7 +17,7 @@
 	}
 }) %}
 
-{% set icon_cnt = html_cva(
+{% set icon_cnt = html_cva({
 	base: 'flex items-center border-2 justify-center h-10 w-10 flex-shrink-0 rounded-full',
 	variants: {
 		type: {
@@ -32,7 +32,7 @@
 	default_variant: {
 		type: 'notice'
 	}
-) %}
+}) %}
 
 <div
 	class="{{ notification.apply({ this.type }, attributes.render('class')) }}"
