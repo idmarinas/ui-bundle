@@ -1,6 +1,6 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
-{% set notification = html_cva({
+{% set notification = html_cva(
 	base: 'border-l-4 transition transform duration-1000 max-w-sm w-full shadow-lg px-4 py-3 mb-4 rounded relative pointer-events-auto',
 	variants: {
 		type: {
@@ -15,9 +15,9 @@
 	default_variant: {
 		type: 'notice'
 	}
-}) %}
+) %}
 
-{% set icon_cnt = html_cva({
+{% set icon_cnt = html_cva(
 	base: 'flex items-center border-2 justify-center h-10 w-10 flex-shrink-0 rounded-full',
 	variants: {
 		type: {
@@ -32,7 +32,7 @@
 	default_variant: {
 		type: 'notice'
 	}
-}) %}
+) %}
 
 <div
 	class="{{ notification.apply({ this.type }, attributes.render('class')) }}"
