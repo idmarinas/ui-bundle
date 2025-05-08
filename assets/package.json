@@ -25,14 +25,14 @@
 		"controllers": {},
 		"importmap": {
 			"@hotwired/stimulus": "^3.2.2",
-			"stimulus-notification": "^2.2.2",
+			"stimulus-notification": "^2.2.0",
 			"hotkeys-js": "^3.13.10",
 			"stimulus-use": "^0.52.3"
 		}
 	},
 	"peerDependencies": {
 		"@hotwired/stimulus": "^3.0.0",
-		"stimulus-notification": "^2.2.2",
+		"stimulus-notification": "^2.2.0",
 		"hotkeys-js": "^3.13.10",
 		"stimulus-use": "^0.52.3"
 	}
