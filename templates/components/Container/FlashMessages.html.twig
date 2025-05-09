@@ -10,7 +10,7 @@
 			{% set message = message.message %}
 		{% endif %}
 
-		<twig:UI:Element:Alert :title="title|default('')" :message="message" :type="label" />
+		<twig:IdmUi:Element:Alert :title="title|default('')" :message="message" :variant="label" />
 	{% endfor %}
 {% endfor %}
 
