@@ -2,19 +2,19 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 08/05/2025, 21:35
+ * Last modified by "IDMarinas" on 09/05/2025, 16:59
  *
  * @project IDMarinas Ui Bundle
- * @see https://github.com/idmarinas/ui-bundle
+ * @see     https://github.com/idmarinas/ui-bundle
  *
- * @file IdmUiBundle.php
- * @date 05/03/2025
- * @time 15:51
+ * @file    IdmUiBundle.php
+ * @date    05/03/2025
+ * @time    15:51
  *
- * @author Iván Diaz Marinas (IDMarinas)
+ * @author  Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
  *
- * @since 1.0.0
+ * @since   1.0.0
  */
 
 namespace Idm\Bundle\Ui;
@@ -51,10 +51,20 @@ final class IdmUiBundle extends AbstractBundle
 				],
 			]);
 		}
+
+		$builder->prependExtensionConfig('ux_icons', [
+			'aliases' => [
+				'alert:error'   => 'tabler:x',
+				'alert:danger'  => 'tabler:x',
+				'alert:success' => 'tabler:check',
+				'alert:warning' => 'tabler:exclamation-mark',
+				'alert:info'    => 'tabler:info-circle',
+				'alert:notice'  => 'tabler:message',
+			],
+		]);
 	}
 
-
-	private function isAssetMapperAvailable(ContainerBuilder $container): bool
+	private function isAssetMapperAvailable (ContainerBuilder $container): bool
 	{
 		if (!interface_exists(AssetMapperInterface::class)) {
 			return false;
