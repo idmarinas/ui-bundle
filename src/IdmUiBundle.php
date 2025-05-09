@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 09/05/2025, 16:59
+ * Last modified by "IDMarinas" on 09/05/2025, 18:22
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -37,7 +37,7 @@ final class IdmUiBundle extends AbstractBundle
 			'defaults' => [
 				'Idm\\Bundle\\Ui\\Twig\\Components\\' => [
 					'template_directory' => '@IdmUi/components',
-					'name_prefix'        => 'UI',
+					'name_prefix'        => 'IdmUi',
 				],
 			],
 		]);
