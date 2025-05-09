@@ -2,7 +2,7 @@
 	{# Read and Display all Notifications messages #}
 	{% set index = 0 %}
 
-	{% for label, msgs in this.messages %}
+	{% for label, msgs in messages %}
 		{% set show_divider = true %}
 
 		{% for message in msgs %}
@@ -18,7 +18,7 @@
 
 			{% set duration = duration + (id * 5000) %}
 
-			<twig:UI:Element:Notification
+			<twig:IdmUi:Element:Notification
 				:id="label ~ '-' ~ id"
 				:type="label"
 				:title="title|default('')"
