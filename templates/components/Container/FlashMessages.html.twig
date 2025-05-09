@@ -1,5 +1,9 @@
+{% props messages = [] %}
+
+{% set show_divider = messages is not empty %}
+
 {# Read and Display all Flash Messages #}
-{% for label, msgs in this.messages %}
+{% for label, msgs in messages %}
 	{% for message in msgs %}
 		{% if message is iterable %}
 			{% set title = message.title %}
