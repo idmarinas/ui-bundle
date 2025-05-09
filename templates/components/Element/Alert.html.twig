@@ -2,14 +2,14 @@
 
 {% props variant, title, message %}
 
-<twig:UI:Element:Alert:Base :variant="variant">
-	<twig:UI:Alert:Icon :variant="variant" />
-	<twig:UI:Alert:Container>
+<twig:IdmUi:Element:Alert:Base :variant="variant">
+	<twig:IdmUi:Alert:Icon :variant="variant" />
+	<twig:IdmUi:Alert:Container>
 		{% if title is not empty %}
-			<twig:UI:Alert:Title>{{ title }}</twig:UI:Alert:Title>
+			<twig:IdmUi:Alert:Title>{{ title }}</twig:IdmUi:Alert:Title>
 		{% endif %}
-		<twig:UI:Alert:Message>
+		<twig:IdmUi:Alert:Message>
 			{{ message }}
-		</twig:UI:Alert:Message>
-	</twig:UI:Alert:Container>
-</twig:UI:Element:Alert:Base>
+		</twig:IdmUi:Alert:Message>
+	</twig:IdmUi:Alert:Container>
+</twig:IdmUi:Element:Alert:Base>
