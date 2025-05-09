@@ -2,19 +2,19 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/05/2025, 14:02
+ * Last modified by "IDMarinas" on 09/05/2025, 17:27
  *
  * @project IDMarinas Ui Bundle
- * @see https://github.com/idmarinas/ui-bundle
+ * @see     https://github.com/idmarinas/ui-bundle
  *
- * @file services.php
- * @date 05/03/2025
- * @time 15:51
+ * @file    services.php
+ * @date    05/03/2025
+ * @time    15:51
  *
- * @author Iván Diaz Marinas (IDMarinas)
+ * @author  Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
  *
- * @since 1.0.0
+ * @since   1.0.0
  */
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
@@ -33,12 +33,6 @@ return function (ContainerConfigurator $container) {
 
 		->set('.idm_ui.twig_component.element.notification', Notification::class)
 			->arg('$translator', service('translator')->nullOnInvalid())
-			->tag('twig.component')
-
-		->set('.idm_ui.twig_component.container.flash_messages', FlashMessages::class)
-			->tag('twig.component')
-
-		->set('.idm_ui.twig_component.container.notification_messages', NotificationMessages::class)
 			->tag('twig.component')
 	;
 	// @formatter::on
