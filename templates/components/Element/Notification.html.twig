@@ -1,70 +1,16 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
-{% set notification = html_cva(
-	base: 'border-l-4 transition transform duration-1000 max-w-sm w-full shadow-lg px-4 py-3 mb-4 rounded relative pointer-events-auto',
-	variants: {
-		type: {
-			danger: 'bg-red-200 border-red-500 text-red-700',
-			error: 'bg-red-200 border-red-500 text-red-700',
-			success: 'bg-green-200 border-green-500 text-green-700',
-			warning: 'bg-yellow-200 border-yellow-500 text-yellow-700',
-			info: 'bg-blue-200 border-blue-500 text-blue-700',
-			notice: 'bg-gray-200 border-gray-500 text-gray-700'
-		}
-	}
-) %}
+{% props type, title, message, closable %}
 
-{% set icon_cnt = html_cva(
-	base: 'flex items-center border-2 justify-center h-10 w-10 flex-shrink-0 rounded-full',
-	variants: {
-		type: {
-			danger: 'bg-red-100 border-red-500',
-			error: 'bg-red-100 border-red-500',
-			success: 'bg-green-100 border-green-500',
-			warning: 'bg-yellow-100 border-yellow-500',
-			info: 'bg-blue-100 border-blue-500',
-			notice: 'bg-gray-100 border-gray-500'
-		}
-	}
-) %}
-
-<div
-	class="{{ notification.apply({ type }, attributes.render('class')) }}"
-	{{ attributes.defaults({
-		'data-controller': 'notification',
-		'data-notification-delay-value': this.duration,
-		'data-transition-enter-from': 'opacity-0 translate-x-6',
-		'data-transition-enter-to': 'opacity-100 translate-x-0',
-		'data-transition-leave-from': 'opacity-100 translate-x-0',
-		'data-transition-leave-to': 'opacity-0 translate-x-6'
-	}) }}
->
-	<div class="p-2">
-		<div class="flex items-start">
-			<div class="{{ icon_cnt.apply({ type }) }}">
-				<twig:UX:Icon :name="icon_name" class="h-5 w-5" />
-			</div>
-
-			<div class="ml-3 w-0 flex-1 pt-0.5">
-				{% if this.title is not empty %}
-					<p class="text-sm font-medium">{{ this.title }}</p>
-				{% endif %}
-
-				<p class="text-sm leading-5">{{ this.message }}</p>
-			</div>
-
-			{% if this.closable %}
-				<div class="ml-4 flex-shrink-0 flex">
-					<button
-						type="button"
-						aria-label="{{ 'notification.close'|trans({}, 'IdmUiBundle') }}"
-						data-action="click->notification#hide"
-						class="inline-flex text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150"
-					>
-						<twig:UX:Icon name="tabler:x" class="h-5 w-5" />
-					</button>
-				</div>
-			{% endif %}
-		</div>
-	</div>
-</div>
+<twig:IdmUi:Notification:Base :type="type">
+	<twig:IdmUi:Notification:Icon :type="type" />
+	<twig:IdmUi:Notification:Container>
+		{% if title is not empty %}
+			<twig:IdmUi:Notification:Title>{{ title }}</twig:IdmUi:Notification:Title>
+		{% endif %}
+		<twig:IdmUi:Notification:Message>{{ message }}</twig:IdmUi:Notification:Message>
+	</twig:IdmUi:Notification:Container>
+	{% if closable is same as(true) %}
+		<twig:IdmUi:Notification:Closable />
+	{% endif %}
+</twig:IdmUi:Notification:Base>
