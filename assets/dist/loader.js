@@ -1,4 +1,1 @@
-import Notification from 'stimulus-notification';
-export default function registerIdmUiBundle(app) {
-	app.register('notification', Notification);
-}
+import Notification from"@stimulus-components/notification";export default function registerIdmUiBundle(app){app.register("notification",Notification)}
