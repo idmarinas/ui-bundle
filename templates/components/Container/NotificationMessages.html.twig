@@ -1,13 +1,11 @@
+{% props messages = [] %}
+
 <div class="fixed inset-x-0 top-0 flex flex-col items-end justify-right px-4 py-6 sm:p-6 justify-end z-30 pointer-events-none">
 	{# Read and Display all Notifications messages #}
-	{% set index = 0 %}
-
 	{% for label, msgs in messages %}
 		{% set show_divider = true %}
 
 		{% for message in msgs %}
-			{% set id = index %}
-			{% set index = index + 1 %}
 			{% set duration = 5000 %}
 
 			{% if message is iterable %}
@@ -16,14 +14,16 @@
 				{% set duration = message.duration|default(duration) %}
 			{% endif %}
 
-			{% set duration = duration + (id * 5000) %}
+			{% set duration = duration + (loop.parent.loop.index0 * 5000) %}
+			{% set closable = duration / 5000 >= 5 %}
 
 			<twig:IdmUi:Element:Notification
-				:id="label ~ '-' ~ id"
+				:id="label ~ '-' ~ loop.parent.loop.index0"
 				:type="label"
 				:title="title|default('')"
 				:message="message"
 				:duration="duration"
+				:closable="closable"
 			/>
 		{% endfor %}
 	{% endfor %}
