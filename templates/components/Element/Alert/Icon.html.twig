@@ -1,9 +1,9 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
-{% props variant = 'notice' %}
+{% props type = 'notice' %}
 
-{% if not enum('Idm\\Bundle\\Ui\\Twig\\Components\\Option\\MessageVariantEnum').isValidValue(variant) %}
-	{% set variant = 'notice' %}
+{% if not enum('Idm\\Bundle\\Ui\\Twig\\Components\\Option\\MessageVariantEnum').isValidValue(type) %}
+	{% set type = 'notice' %}
 {% endif %}
 
 {% set style = html_cva(
@@ -24,5 +24,5 @@
 	class="{{ style.apply({ type }, attributes.render('class'))|tailwind_merge }}"
 	{{ attributes }}
 >
-	<twig:UX:Icon :name="'alert:' ~ variant" class="h-5 w-5" />
+	<twig:UX:Icon :name="'alert:' ~ type" class="h-5 w-5" />
 </div>

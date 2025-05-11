@@ -1,9 +1,9 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
-{% props variant, title, message %}
+{% props type, title, message %}
 
-<twig:IdmUi:Element:Alert:Base :variant="variant">
-	<twig:IdmUi:Alert:Icon :variant="variant" />
+<twig:IdmUi:Element:Alert:Base :type="type">
+	<twig:IdmUi:Alert:Icon :type="type" />
 	<twig:IdmUi:Alert:Container>
 		{% if title is not empty %}
 			<twig:IdmUi:Alert:Title>{{ title }}</twig:IdmUi:Alert:Title>

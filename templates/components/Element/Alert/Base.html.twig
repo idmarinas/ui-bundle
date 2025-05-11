@@ -1,11 +1,11 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
-{% props variant %}
+{% props type %}
 
 {% set style = html_cva(
 	base: 'flex flex-row items-center p-5 rounded border-b-2 mb-2 text-left',
 	variants: {
-		variant: {
+		type: {
 			danger: 'bg-red-200 border-red-500 text-red-700',
 			error: 'bg-red-200 border-red-500 text-red-700',
 			success: 'bg-green-200 border-green-500 text-green-700',
@@ -15,7 +15,7 @@
 		}
 	},
 	default_variant: {
-		variant: 'notice'
+		type: 'notice'
 	}
 ) %}
 
