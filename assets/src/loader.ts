@@ -1,0 +1,23 @@
+/**
+ * Copyright 2025 (C) IDMarinas - All Rights Reserved
+ *
+ * Last modified by "IDMarinas" on 12/05/2025, 24:05
+ *
+ * @project IDMarinas Ui Bundle
+ * @see https://github.com/idmarinas/ui-bundle
+ *
+ * @file loader.ts
+ * @date 12/05/2025
+ * @time 24:30
+ *
+ * @author Iván Diaz Marinas (IDMarinas)
+ * @license BSD 3-Clause License
+ *
+ * @since 1.0.0
+ */
+
+import Notification from '@stimulus-components/notification';
+
+export default function registerIdmUiBundle(app) {
+	app.register('notification', Notification);
+}
