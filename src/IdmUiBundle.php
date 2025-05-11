@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 09/05/2025, 18:22
+ * Last modified by "IDMarinas" on 11/05/2025, 20:09
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -60,6 +60,13 @@ final class IdmUiBundle extends AbstractBundle
 				'alert:warning' => 'tabler:exclamation-mark',
 				'alert:info'    => 'tabler:info-circle',
 				'alert:notice'  => 'tabler:message',
+				'toast:error'   => 'tabler:x',
+				'toast:danger'  => 'tabler:x',
+				'toast:success' => 'tabler:check',
+				'toast:warning' => 'tabler:exclamation-mark',
+				'toast:info'    => 'tabler:info-circle',
+				'toast:notice'  => 'tabler:message',
+				'close'         => 'tabler:x',
 			],
 		]);
 	}
