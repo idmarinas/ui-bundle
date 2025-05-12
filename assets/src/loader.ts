@@ -1,7 +1,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 12/05/2025, 24:05
+ * Last modified by "IDMarinas" on 12/05/2025, 16:02
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -17,7 +17,8 @@
  */
 
 import Notification from '@stimulus-components/notification';
+import {Application} from "@hotwired/stimulus";
 
-export default function registerIdmUiBundle(app) {
+export default function registerIdmUiBundle(app: Application) {
 	app.register('notification', Notification);
 }
