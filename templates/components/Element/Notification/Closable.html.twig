@@ -1,0 +1,15 @@
+{# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
+
+<div
+	class="{{ ('ml-4 flex-shrink-0 flex ' ~ attributes.render('class'))|tailwind_merge }}"
+	{{ attributes }}
+>
+	<button
+		type="button"
+		aria-label="{{ 'notification.close'|trans(domain = 'IdmUiBundle') }}"
+		data-action="click->notification#hide"
+		class="inline-flex text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150"
+	>
+		<twig:UX:Icon name="close" class="h-5 w-5" />
+	</button>
+</div>
