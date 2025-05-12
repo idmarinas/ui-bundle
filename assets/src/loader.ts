@@ -1,7 +1,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 12/05/2025, 22:10
+ * Last modified by "IDMarinas" on 12/05/2025, 22:23
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -18,7 +18,7 @@
 
 import {Application} from "@hotwired/stimulus";
 import Notification from '@stimulus-components/notification';
-import ThemeToggle from './theme_toggle';
+import ThemeToggle from './theme_toggle.js';
 
 export default function registerIdmUiBundle(app: Application) {
 	app.register('notification', Notification);
