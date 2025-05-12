@@ -1,7 +1,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 12/05/2025, 22:15
+ * Last modified by "IDMarinas" on 12/05/2025, 22:35
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -43,8 +43,8 @@ export default class extends Controller<HTMLFormElement> {
 
 		this.timeout = setTimeout(() => {
 			document.documentElement.classList.toggle('dark', theme === 'dark');
-			document.getElementById('theme-toggle-sun-icon').classList.toggle('hidden', theme === 'light');
-			document.getElementById('theme-toggle-moon-icon').classList.toggle('hidden', theme === 'dark');
+			document.getElementById('theme-toggle-sun-icon').classList.toggle('hidden', theme !== 'light');
+			document.getElementById('theme-toggle-moon-icon').classList.toggle('hidden', theme !== 'dark');
 		}, 250);
 	}
 
