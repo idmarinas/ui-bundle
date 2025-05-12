@@ -1,11 +1,11 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
 <twig:IdmUi:Element:Alert:Base :type="type">
-	<twig:IdmUi:Alert:Icon :type="type" />
-	<twig:IdmUi:Alert:Container>
+	<twig:IdmUi:Element:Alert:Icon :type="type" />
+	<twig:IdmUi:Element:Alert:Container>
 		{% if title is not empty %}
-			<twig:IdmUi:Alert:Title>{{ title }}</twig:IdmUi:Alert:Title>
+			<twig:IdmUi:Element:Alert:Title>{{ title }}</twig:IdmUi:Element:Alert:Title>
 		{% endif %}
-		<twig:IdmUi:Alert:Message>{{ message }}</twig:IdmUi:Alert:Message>
-	</twig:IdmUi:Alert:Container>
+		<twig:IdmUi:Element:Alert:Message>{{ message }}</twig:IdmUi:Element:Alert:Message>
+	</twig:IdmUi:Element:Alert:Container>
 </twig:IdmUi:Element:Alert:Base>

@@ -1,14 +1,14 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
-<twig:IdmUi:Notification:Base :type="type">
-	<twig:IdmUi:Notification:Icon :type="type" />
-	<twig:IdmUi:Notification:Container>
+<twig:IdmUi:Element:Notification:Base :type="type">
+	<twig:IdmUi:Element:Notification:Icon :type="type" />
+	<twig:IdmUi:Element:Notification:Container>
 		{% if title is not empty %}
-			<twig:IdmUi:Notification:Title>{{ title }}</twig:IdmUi:Notification:Title>
+			<twig:IdmUi:Element:Notification:Title>{{ title }}</twig:IdmUi:Element:Notification:Title>
 		{% endif %}
-		<twig:IdmUi:Notification:Message>{{ message }}</twig:IdmUi:Notification:Message>
-	</twig:IdmUi:Notification:Container>
+		<twig:IdmUi:Element:Notification:Message>{{ message }}</twig:IdmUi:Element:Notification:Message>
+	</twig:IdmUi:Element:Notification:Container>
 	{% if closable is same as(true) %}
-		<twig:IdmUi:Notification:Closable />
+		<twig:IdmUi:Element:Notification:Closable />
 	{% endif %}
-</twig:IdmUi:Notification:Base>
+</twig:IdmUi:Element:Notification:Base>
