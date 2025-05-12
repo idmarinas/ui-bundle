@@ -1,1 +1,1 @@
-import Notification from"@stimulus-components/notification";import ThemeToggle from"./theme_toggle";export default function registerIdmUiBundle(app){app.register("notification",Notification);app.register("theme-toggle",ThemeToggle)}
+import Notification from"@stimulus-components/notification";import ThemeToggle from"./theme_toggle.js";export default function registerIdmUiBundle(app){app.register("notification",Notification);app.register("theme-toggle",ThemeToggle)}

@@ -6,7 +6,7 @@
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
  *
- * @file ss.js
+ * @file theme_toggle.ts
  * @date 11/05/2025
  * @time 23:49
  *
