@@ -1,0 +1,29 @@
+{# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
+
+{% props variant = 'accent' %}
+
+{% set style = html_cva(
+	base: 'rounded-lg text-sm p-2.5',
+	variants: {
+		variant: {
+			primary: 'bg-primary text-primary-foreground  border border-transparent hover:border-border',
+			secondary: 'bg-secondary text-secondary-foreground  border border-transparent hover:border-border',
+			accent: 'bg-accent text-accent-foreground border border-transparent hover:border-border',
+		}
+	},
+	default_variant: {
+		variant: 'accent'
+	}
+) %}
+
+<button
+	id="theme-toggle"
+	type="button"
+	class="{{ style.apply({variant}, attributes.render('class'))|tailwind_merge }}"
+	{{ attributes }}
+	data-controller="theme-toggle"
+	data-action="clik->theme-toggle#toggle"
+>
+	<twig:UX:Icon name="tabler:sun" id="theme-toggle-sun-icon" class="w-5 h-5 hidden" />
+	<twig:UX:Icon name="tabler:moon" id="theme-toggle-moon-icon" class="w-5 h-5 hidden" />
+</button>
