@@ -2,19 +2,19 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/05/2025, 19:36
+ * Last modified by "IDMarinas" on 11/05/2025, 21:49
  *
  * @project IDMarinas Ui Bundle
- * @see https://github.com/idmarinas/ui-bundle
+ * @see     https://github.com/idmarinas/ui-bundle
  *
- * @file Alert.php
- * @date 05/03/2025
- * @time 18:13
+ * @file    Alert.php
+ * @date    05/03/2025
+ * @time    18:13
  *
- * @author Iván Diaz Marinas (IDMarinas)
+ * @author  Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
  *
- * @since 1.0.0
+ * @since   1.0.0
  */
 
 namespace Idm\Bundle\Ui\Twig\Components\Element;
@@ -26,7 +26,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Contracts\Translation\TranslatableInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
-use Symfony\UX\TwigComponent\Attribute\ExposeInTemplate;
 use Symfony\UX\TwigComponent\Attribute\PreMount;
 
 #[AsTwigComponent]
@@ -57,33 +56,11 @@ final class Alert
 			->setAllowedTypes('message', ['string', TranslatableInterface::class])
 			->setAllowedTypes('type', ['string', MessageVariantEnum::class])
 			->setAllowedValues('type', fn(string|MessageVariantEnum $value) => MessageVariantEnum::isValidValue($value))
-			->setNormalizer(
-				'type',
-				fn(Options $opts, string|MessageVariantEnum $type) => MessageVariantEnum::normalizeValue($type)
-			)
-			->setNormalizer(
-				'title',
-				fn(Options $opts, string|TranslatableInterface $value) => $this->translateOrSanitize($value)
-			)
-			->setNormalizer(
-				'message',
-				fn(Options $opts, string|TranslatableInterface $value) => $this->translateOrSanitize($value)
-			)
+			->setNormalizer('type', fn(Options $opts, string|MessageVariantEnum $v) => MessageVariantEnum::normalizeValue($v))
+			->setNormalizer('title', fn(Options $opts, string|TranslatableInterface $v) => $this->translateOrSanitize($v))
+			->setNormalizer('message', fn(Options $opts, string|TranslatableInterface $v) => $this->translateOrSanitize($v))
 		;
 
 		return $resolver->resolve($data) + $data;
-	}
-
-	#[ExposeInTemplate('icon_name')]
-	public function getIconName (): string
-	{
-		return match ($this->type) {
-			MessageVariantEnum::Error,
-			MessageVariantEnum::Danger  => 'tabler:x',
-			MessageVariantEnum::Success => 'tabler:check',
-			MessageVariantEnum::Warning => 'tabler:exclamation-mark',
-			MessageVariantEnum::Info    => 'tabler:info-circle',
-			MessageVariantEnum::Notice  => 'tabler:message',
-		};
 	}
 }
