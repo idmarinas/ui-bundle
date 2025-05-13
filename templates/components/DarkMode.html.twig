@@ -25,6 +25,12 @@
 	data-action="click->theme-toggle#toggle"
 >
 	<twig:UX:Icon
+		name="tabler:sun-moon"
+		id="theme-toggle-sun-moon-icon"
+		class="{{ ('w-5 h-5 ' ~ attributes.nested('sun-moon').render('class'))|tailwind_merge }}"
+		{{ attributes.nested('sun-moon') }}
+	/>
+	<twig:UX:Icon
 		name="tabler:sun" id="theme-toggle-sun-icon"
 		class="{{ ('w-5 h-5 hidden ' ~ attributes.nested('sun').render('class'))|tailwind_merge }}"
 		{{ attributes.nested('sun') }}
