@@ -1,7 +1,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 12/05/2025, 22:35
+ * Last modified by "IDMarinas" on 13/05/2025, 16:57
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -25,6 +25,7 @@ export default class extends Controller<HTMLFormElement> {
 		super.initialize();
 		if (undefined === localStorage.theme) {
 			localStorage.theme = this.userTheme();
+			document.getElementById('theme-toggle-sun-moon-icon').classList.toggle('hidden', true);
 		}
 
 		this.changeTheme(localStorage.theme);
