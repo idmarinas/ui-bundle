@@ -3,7 +3,8 @@
 {% props type, duration = 5000 %}
 
 {% set style = html_cva(
-	base: 'border-l-4 transition transform duration-1000 max-w-sm w-full shadow-lg px-4 py-3 mb-4 rounded relative pointer-events-auto',
+	base: 'border-l-4 motion-safe:transition motion-safe:transform motion-safe:duration-1000 max-w-sm w-full shadow-lg
+	px-4 py-3 mb-4 rounded relative pointer-events-auto',
 	variants: {
 		type: {
 			danger: 'bg-danger text-danger-foreground border-danger-border',
