@@ -1,7 +1,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 13/05/2025, 16:57
+ * Last modified by "IDMarinas" on 13/05/2025, 17:38
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -25,7 +25,6 @@ export default class extends Controller<HTMLFormElement> {
 		super.initialize();
 		if (undefined === localStorage.theme) {
 			localStorage.theme = this.userTheme();
-			document.getElementById('theme-toggle-sun-moon-icon').classList.toggle('hidden', true);
 		}
 
 		this.changeTheme(localStorage.theme);
@@ -44,6 +43,7 @@ export default class extends Controller<HTMLFormElement> {
 
 		this.timeout = setTimeout(() => {
 			document.documentElement.classList.toggle('dark', theme === 'dark');
+			document.getElementById('theme-toggle-sun-moon-icon').classList.toggle('hidden', true);
 			document.getElementById('theme-toggle-sun-icon').classList.toggle('hidden', theme !== 'light');
 			document.getElementById('theme-toggle-moon-icon').classList.toggle('hidden', theme !== 'dark');
 		}, 250);
