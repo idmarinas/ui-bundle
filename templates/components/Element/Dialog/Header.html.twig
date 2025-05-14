@@ -1,7 +1,7 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
 <div
-	class="{{ ('text-sm font-medium ' ~ attributes.render('class'))|tailwind_merge }}"
+	class="{{ ('font-medium ' ~ attributes.render('class'))|tailwind_merge }}"
 	data-action="click->dialog#open"
 	{{ attributes }}
 >
