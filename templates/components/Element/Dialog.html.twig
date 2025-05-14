@@ -1,0 +1,15 @@
+{# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
+
+<div data-controller="dialog" data-action="click->dialog#backdropClose">
+	<dialog
+		class="{{ ('flex flex-col rounded ' ~ attributes.render('class'))|tailwind_merge }}"
+		{{ attributes }}
+		data-dialog-target="dialog"
+	>
+		{% block content %}{% endblock %}
+	</dialog>
+
+	<span data-action="click->dialog#open">
+		{% block activator %}{% endblock %}
+	</span>
+</div>

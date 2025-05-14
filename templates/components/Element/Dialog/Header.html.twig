@@ -1,0 +1,20 @@
+{# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
+
+<div
+	class="{{ ('text-sm font-medium ' ~ attributes.render('class'))|tailwind_merge }}"
+	data-action="click->dialog#open"
+	{{ attributes }}
+>
+	{% block content %}{% endblock %}
+
+	{% if not attributes.has('withCloseButton') attributes.has('withCloseButton') and attributes.all().withCloseButton is same as(true) %}
+		<button
+			type="button"
+			aria-label="{{ 'dialog.close'|trans(domain = 'IdmUiBundle') }}"
+			data-action="click->dialog#close"
+			class="inline-flex focus:outline-none motion-safe:transition motion-safe:ease-in-out motion-safe:duration-150"
+		>
+			<twig:UX:Icon name="close" class="h-5 w-5" />
+		</button>
+	{% endif %}
+</div>
