@@ -2,7 +2,7 @@
 
 <div data-controller="dialog" data-action="click->dialog#backdropClose">
 	<dialog
-		class="{{ ('flex flex-col rounded ' ~ attributes.render('class'))|tailwind_merge }}"
+		class="{{ ('flex flex-col rounded-lg ' ~ attributes.render('class'))|tailwind_merge }}"
 		{{ attributes }}
 		data-dialog-target="dialog"
 	>
