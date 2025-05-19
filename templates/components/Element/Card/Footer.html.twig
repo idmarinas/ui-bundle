@@ -1,7 +1,7 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
 <div
-	class="{{ ('p-6 ' ~ attributes.render('class'))|tailwind_merge }}"
+	class="{{ ('flex items-center p-6 ' ~ attributes.render('class'))|tailwind_merge }}"
 	{{ attributes }}
 >
 	{% block content %}{% endblock %}
