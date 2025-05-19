@@ -35,8 +35,8 @@
 	},
 	"peerDependencies": {
 		"@hotwired/stimulus": "^3.0.0",
-		"@stimulus-components/notification": "^3.0.0",
 		"@stimulus-components/dialog": "^1.0.1",
+		"@stimulus-components/notification": "^3.0.0",
 		"hotkeys-js": "^3.13.10",
 		"stimulus-use": "^0.52.3"
 	},
