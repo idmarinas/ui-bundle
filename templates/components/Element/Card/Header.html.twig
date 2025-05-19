@@ -1,7 +1,7 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
 <div
-	class="{{ ('flex-initial font-medium space-y-1.5 p-6 ' ~ attributes.render('class'))|tailwind_merge }}"
+	class="{{ ('font-medium space-y-1.5 p-6 ' ~ attributes.render('class'))|tailwind_merge }}"
 	{{ attributes }}
 >
 	{% block content %}{% endblock %}
