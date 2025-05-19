@@ -4,7 +4,7 @@
 
 {% set attributes = attributes.remove('withCloseButton') %}
 <div
-	class="{{ ('text-2xl font-medium flex flex-row gap-2 p-6 ' ~ attributes.render('class'))|tailwind_merge }}"
+	class="{{ ('text-2xl font-medium flex flex-row gap-2 p-6 bg-accent ' ~ attributes.render('class'))|tailwind_merge }}"
 	{{ attributes }}
 >
 	{% block content %}{% endblock %}
@@ -14,7 +14,7 @@
 			type="button"
 			aria-label="{{ 'dialog.close'|trans(domain = 'IdmUiBundle') }}"
 			data-action="click->dialog#close"
-			class="absolute right-0"
+			class="absolute right-6"
 		>
 			<twig:UX:Icon name="close" class="h-6 w-6" />
 		</button>
