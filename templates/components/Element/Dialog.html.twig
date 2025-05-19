@@ -1,10 +1,27 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
-<div data-controller="dialog" data-action="click->dialog#backdropClose">
+{% props size %}
+
+{% set style = html_cva(
+	base: 'bg-primary-50 rounded-lg shadow-xl p-6 mb-6 sm:mb-auto',
+	variants: {
+		size: {
+			small: '',
+			medium: '',
+			large: '',
+			full: 'w-full'
+		}
+	},
+	default_variant: {
+		size: 'medium'
+	}
+) %}
+
+<div data-controller="dialog" data-action="click->dialog#backdropClose" class="">
 	<dialog
-		class="{{ ('flex flex-col rounded-lg ' ~ attributes.render('class'))|tailwind_merge }}"
-		{{ attributes }}
 		data-dialog-target="dialog"
+		class="{{ style.apply({ size }, attributes.render('class'))|tailwind_merge }}"
+		{{ attributes }}
 	>
 		{% block content %}{% endblock %}
 	</dialog>
