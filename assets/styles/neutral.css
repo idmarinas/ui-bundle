@@ -1,7 +1,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 14/05/2025, 21:48
+ * Last modified by "IDMarinas" on 19/05/2025, 18:48
  *
  * @project IDMarinas Ui Bundle
  * @see https://github.com/idmarinas/ui-bundle
@@ -36,9 +36,6 @@
 
 	--border: var(--color-slate-500);
 	--ring: var(--color-slate-700);
-
-	--color-white: var(--color-white);
-	--color-black: var(--color-black);
 
 	/* Components */
 	/* Status colors */
@@ -93,9 +90,6 @@
 	--border: var(--color-slate-500);
 	--ring: var(--color-slate-300);
 
-	--color-white: var(--color-black);
-	--color-black: var(--color-white);
-
 	/* Components */
 	/* Status colors */
 	--error: var(--color-red-800);
@@ -143,8 +137,6 @@
 	--color-accent-foreground: var(--accent-foreground);
 	--color-border: var(--border);
 	--color-ring: var(--ring);
-	--color-white: var(--color-white);
-	--color-black: var(--color-black);
 
 	/* Components*/
 	/* Status colors */
