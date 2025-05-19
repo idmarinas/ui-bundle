@@ -1,7 +1,7 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
 <div
-	class="{{ ('flex flex-row gap-2 ' ~ attributes.render('class'))|tailwind_merge }}"
+	class="{{ ('flex flex-row gap-2 pt-3 ' ~ attributes.render('class'))|tailwind_merge }}"
 	{{ attributes }}
 >
 	{% block content %}{% endblock %}
