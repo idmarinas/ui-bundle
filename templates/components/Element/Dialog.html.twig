@@ -1,20 +1,28 @@
 {# @var attributes \Symfony\UX\TwigComponent\ComponentAttributes #}
 
-{% props size %}
+{% props size = 'md' %}
 
 {% set style = html_cva(
-	base: 'bg-primary-50 rounded-lg shadow-xl p-6 mb-6 sm:mb-auto',
+	base: 'bg-secondary text-secondary-foreground backdrop:bg-black/75 rounded-lg shadow-xl p-6 mb-6 sm:mb-auto',
 	variants: {
 		size: {
-			small: '',
-			medium: '',
-			large: '',
-			full: 'w-full'
+			xs: 'w-full sm:w-1/4',
+			sm: 'w-full sm:w-1/3',
+			md: 'w-full sm:w-2/5',
+			lg: 'w-full sm:w-3/5',
+			xl: 'w-full sm:w-3/4',
+			screen: 'w-screen h-screen'
 		}
 	},
 	default_variant: {
-		size: 'medium'
-	}
+		size: 'md'
+	},
+	compound_variants: [
+		{
+			size: ['screen'],
+			class: 'open:flex open:flex-col'
+		}
+	]
 ) %}
 
 <div data-controller="dialog" data-action="click->dialog#backdropClose" class="">
