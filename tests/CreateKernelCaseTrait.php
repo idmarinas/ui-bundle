@@ -2,7 +2,7 @@
 /**
  * Copyright 2025-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 18:38
+ * Last modified by "IDMarinas" on 08/01/2026, 13:34
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -17,7 +17,7 @@
  * @since   2.0.0
  */
 
-namespace Idm\Bundle\Template\Tests;
+namespace Idm\Bundle\Ui\Tests;
 
 use App\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
