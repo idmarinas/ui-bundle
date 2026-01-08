@@ -2,11 +2,9 @@
 **/*.dist
 /build/
 /vendor/
-/**/node_modules/
 /var/
 /phpunit.xml
 !/phpunit.xml.dist
 /.phpunit.cache/
 /composer.lock
-/**/package-lock.json
 ###< idmarinas/ui-bundle ###
