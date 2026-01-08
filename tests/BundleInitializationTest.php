@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2025, 24:45
+ * Last modified by "IDMarinas" on 08/01/2026, 13:18
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -22,18 +22,10 @@ namespace Idm\Bundle\Ui\Tests;
 
 use App\Kernel;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Symfony\Component\HttpKernel\KernelInterface;
 
 final class BundleInitializationTest extends KernelTestCase
 {
-	protected static function createKernel (array $options = []): KernelInterface
-	{
-		/** @var Kernel $kernel */
-		$kernel = parent::createKernel($options);
-		$kernel->handleOptions($options);
-
-		return $kernel;
-	}
+	use CreateKernelCaseTrait;
 
 	public function testInitBundle (): void
 	{
@@ -47,6 +39,6 @@ final class BundleInitializationTest extends KernelTestCase
 			},
 		]);
 
-		$this->assertTrue(true);
+		$this->assertTrue($kernel->getContainer()->has('kernel'));
 	}
 }
