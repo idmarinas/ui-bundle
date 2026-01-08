@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright 2024 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 30/12/2024, 17:53
+ * Last modified by "IDMarinas" on 08/01/2026, 13:27
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
  *
- * @file    router.php
+ * @file    easy_admin.php
  * @date    05/03/2025
  * @time    15:51
  *
@@ -21,6 +21,8 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 return static function (ContainerConfigurator $container) {
 	$container->extension('framework', [
+		'form'   => true,
+		'assets' => true,
 		'router' => [
 			'utf8' => true,
 		],
