@@ -6,6 +6,7 @@
         <cache>
           <versions>
             <info id="LocalF:\Bundles\ui-bundle\vendor\autoload.php" version="PHPUnit version can't be detected. Default PHP interpreter is not local" />
+            <info id="interpreter-6ee29e12-f5fd-4bff-bd0a-eba63ea7b33d" version="12.5.4" />
           </versions>
         </cache>
       </tool>
