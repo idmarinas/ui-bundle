@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2021-2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2021-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 12/02/2025, 13:16
+ * Last modified by "IDMarinas" on 08/01/2026, 13:19
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -17,18 +17,17 @@
  * @since   1.0.0
  */
 
-namespace Idm\Bundle\Ui\Tests\Extension;
+namespace Idm\Bundle\Template\Tests\Twig\Extension;
 
-use Symfony\Component\Config\Loader\LoaderInterface;
+use App\Kernel;
+use PHPUnit\Framework\Attributes\Group;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpKernel\Kernel;
 use Twig\Test\IntegrationTestCase;
 
 /**
  * Test Twig Extensions.
- *
- * @group ignore
  */
+#[Group("ignore")]
 final class IntegrationTest extends IntegrationTestCase
 {
 	public static function getFixturesDirectory (): string
@@ -43,24 +42,10 @@ final class IntegrationTest extends IntegrationTestCase
 
 	protected function getContainer (): ContainerInterface
 	{
-		$kernel = new ExtensionTestingKernel();
+		$kernel = new Kernel('test', true);
+		$kernel->addExtraConfig(dirname(__DIR__, 2) . '/config/idm_advertising.php');
 		$kernel->boot();
 
 		return $kernel->getContainer();
 	}
-}
-
-class ExtensionTestingKernel extends Kernel
-{
-	public function __construct ()
-	{
-		parent::__construct('test', true);
-	}
-
-	public function registerBundles (): iterable
-	{
-		return [];
-	}
-
-	public function registerContainerConfiguration (LoaderInterface $loader): void {}
 }
