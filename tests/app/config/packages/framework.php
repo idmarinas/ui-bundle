@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 08/01/2026, 13:28
+ * Last modified by "IDMarinas" on 08/01/2026, 13:36
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -63,7 +63,7 @@ return static function (ContainerConfigurator $container) {
 			],
 		],
 		'property_access'       => [
-			'enabled' => false,
+			'enabled' => true,
 		],
 		'php_errors'            => [
 			'log' => true,
