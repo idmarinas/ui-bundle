@@ -6,7 +6,7 @@
 /var/
 /phpunit.xml
 !/phpunit.xml.dist
-/.phpunit.result.cache
+/.phpunit.cache/
 /composer.lock
 /**/package-lock.json
 ###< idmarinas/ui-bundle ###
