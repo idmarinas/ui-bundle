@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 05/03/2025, 22:14
+ * Last modified by "IDMarinas" on 08/01/2026, 13:31
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -36,11 +36,13 @@ return [
 	TwigExtraBundle::class        => ['all' => true],
 	TwigComponentBundle::class    => ['all' => true],
 	UXIconsBundle::class          => ['all' => true],
-	IdmUiBundle::class            => ['all' => true],
 
 	// Dev-Test Bundles
 	MakerBundle::class            => ['all' => true],
 	DoctrineFixturesBundle::class => ['all' => true],
 	DAMADoctrineTestBundle::class => ['all' => true],
 	ZenstruckFoundryBundle::class => ['all' => true],
+
+	// This Bundle
+	IdmUiBundle::class            => ['all' => true],
 ];
