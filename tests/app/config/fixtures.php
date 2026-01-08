@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 31/01/2025, 19:08
+ * Last modified by "IDMarinas" on 08/01/2026, 13:23
  *
  * @project IDMarinas Ui Bundle
  * @see     https://github.com/idmarinas/ui-bundle
@@ -17,13 +17,14 @@
  * @since   1.0.0
  */
 
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $container) {
+return static function (ContainerConfigurator $container, ContainerBuilder $builder) {
 	// @formatter:off
 	$container
 		->services()
-			->load('DataFixtures\\', dirname(__DIR__, 2) . '/fixtures')
+			->load('DataFixtures\\', $builder->getParameter('kernel.project_dir') . '/tests/DataFixtures')
 			->public()
 			->autowire()
 			->autoconfigure()
